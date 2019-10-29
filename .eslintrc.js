@@ -1,26 +1,26 @@
 module.exports = {
   globals: {
-    __PATH_PREFIX__: true
+    __PATH_PREFIX__: true,
   },
   parser: "babel-eslint",
   plugins: ["compat", "react-hooks"],
   env: {
     browser: true,
     es6: true,
-    node: true
+    node: true,
   },
   globals: {
-    ENV: true
+    ENV: true,
   },
   extends: [
-    "plugin:prettier/recommended",
     "react-app",
     "eslint:recommended",
     "airbnb",
-    "prettier/react"
+    "plugin:prettier/recommended",
+    "prettier/react",
   ],
   parserOptions: {
-    sourceType: "module"
+    sourceType: "module",
   },
   rules: {
     "comma-dangle": ["error", "never"],
@@ -34,25 +34,24 @@ module.exports = {
       "error",
       {
         components: ["Link"],
-        specialLink: ["to"]
-      }
+        specialLink: ["to"],
+      },
     ],
     "import/prefer-default-export": 0,
     "import/no-extraneous-dependencies": 0,
-    "linebreak-style": ["error", "windows"],
     "no-console": [
       "error",
       {
-        allow: ["warn", "error"]
-      }
+        allow: ["warn", "error"],
+      },
     ],
     "no-unused-vars": 0,
     quotes: [
       "error",
       "double",
       {
-        allowTemplateLiterals: true
-      }
+        allowTemplateLiterals: true,
+      },
     ],
 
     "react/no-unused-prop-types": 0,
@@ -60,6 +59,6 @@ module.exports = {
     "react/forbid-prop-types": 0,
     "react/prop-types": ["error", { skipUndeclared: true }],
     "react/require-default-props": 0,
-    semi: ["error", "always"]
-  }
+    semi: ["error", "always"],
+  },
 };

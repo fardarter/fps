@@ -19,7 +19,6 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.18.2",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -29,19 +28,25 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react-hooks": "^2.2.0"
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "prettier": "^1.18.2"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "test:all": "npm run test:eslint",
+    "fix:eslint": "eslint . --fix",
+    "test:eslint": "eslint .",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "build:dev": "gatsby build",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "clean": "gatsby clean",
+    "start": "npm run develop",
+    "build": "npm run test:eslint && npm run clean && gatsby build"
   },
   "repository": {
     "type": "git",
