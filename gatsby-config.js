@@ -11,6 +11,9 @@ const contentfulConfig = {
   host: process.env.CONTENTFUL_HOST
 };
 
+// eslint-disable-next-line no-console
+console.log("testing logging", process.env.TEST);
+
 module.exports = {
   siteMetadata: {
     title: `Fire Place Studio Development`,
