@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-fps",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Fireplace Studio website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Saul Nachman<saulnachman@gmail.com> ",
   "dependencies": {
     "gatsby": "^2.16.1",
     "gatsby-image": "^2.2.29",
@@ -12,6 +12,7 @@
     "gatsby-plugin-offline": "^3.0.17",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-sharp": "^2.2.31",
+    "gatsby-source-contentful": "^2.1.54",
     "gatsby-source-filesystem": "^2.1.33",
     "gatsby-transformer-sharp": "^2.2.23",
     "prop-types": "^15.7.2",
@@ -47,7 +48,8 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
     "clean": "gatsby clean",
     "start": "npm run develop",
-    "build": "npm run test:eslint && npm run clean && gatsby build"
+    "build": "npm run test:eslint && npm run clean && gatsby build",
+    "setup": "npm install --no-save contentful-import inquirer yargs-parser chalk && node ./bin/setup.js"
   },
   "repository": {
     "type": "git",

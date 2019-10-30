@@ -34,6 +34,7 @@ const Layout = ({ children }) => {
           paddingTop: 0
         }}
       >
+        <div>Hi: {process.env.TEST}</div>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
