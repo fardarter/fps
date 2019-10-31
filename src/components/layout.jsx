@@ -56,10 +56,6 @@ const Layout = ({ children }) => {
           paddingTop: 0
         }}
       >
-        <img
-          src={data.allContentfulFireplace.edges[0].node.image.file.url}
-          alt=""
-        />
         <div>Hi: {process.env.TEST}</div>
         <main>{children}</main>
         <footer>
