@@ -15,6 +15,28 @@ import "./layout.css";
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
+      allContentfulFireplace {
+        edges {
+          node {
+            id
+            image {
+              title
+              file {
+                contentType
+                fileName
+                url
+                details {
+                  image {
+                    height
+                    width
+                  }
+                  size
+                }
+              }
+            }
+          }
+        }
+      }
       site {
         siteMetadata {
           title
@@ -34,6 +56,10 @@ const Layout = ({ children }) => {
           paddingTop: 0
         }}
       >
+        <img
+          src={data.allContentfulFireplace.edges[0].node.image.file.url}
+          alt=""
+        />
         <div>Hi: {process.env.TEST}</div>
         <main>{children}</main>
         <footer>
