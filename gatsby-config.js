@@ -14,10 +14,12 @@ const contentfulConfig = {
 module.exports = {
   siteMetadata: {
     title: `Fire Place Studio Development`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`
+    description: `The Fireplace Experts`,
+    author: "Fireplace Studio",
+    siteUrl: `${process.env.DEPLOY_URL}`
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
