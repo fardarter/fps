@@ -52,8 +52,8 @@ module.exports = {
       options: {
         headers: {
           "/*": [
-            "Cache-Control=public,max-age=360000",
-            "Content-Security-Policy=default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';"
+            "Cache-Control: public,max-age=360000",
+            "Content-Security-Policy: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'"
           ]
         } // option to add more headers. `Link` headers are transformed by the below criteria
       }
