@@ -48,26 +48,12 @@ module.exports = {
     },
     `gatsby-plugin-offline`, // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
     {
-      resolve: `gatsby-plugin-csp`,
-      options: {
-        disableOnDev: true,
-        reportOnly: false, // Changes header to Content-Security-Policy-Report-Only for csp testing purposes
-        mergeScriptHashes: true, // you can disable scripts sha256 hashes
-        mergeStyleHashes: false, // you can disable styles sha256 hashes
-        mergeDefaultDirectives: true,
-        directives: {
-          "style-src": "'self' 'unsafe-inline'",
-          "img-src": "'self' data: images.ctfassets.net"
-        }
-      }
-    },
-    {
       resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {
           "/*": [
             "Cache-Control: public,max-age=360000",
-            `Content-Security-Policy: img-src 'self' data: images.ctfassets.net; style-src 'self' 'unsafe-inline'; worker-src 'self'; base-uri 'self'; default-src 'self'; object-src 'none'; form-action 'self'; font-src 'self' data:; connect-src 'self';`
+            `Content-Security-Policy: script-src 'self'; img-src 'self' data: images.ctfassets.net; style-src 'self' 'unsafe-inline'; worker-src 'self'; base-uri 'self'; default-src 'self'; object-src 'none'; form-action 'self'; font-src 'self' data:; connect-src 'self';`
           ]
         } // option to add more headers. `Link` headers are transformed by the below criteria
       }
