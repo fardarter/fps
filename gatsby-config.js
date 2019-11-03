@@ -47,6 +47,13 @@ module.exports = {
       options: contentfulConfig
     },
     `gatsby-plugin-offline`, // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
-    `gatsby-plugin-netlify`
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/*": ["Cache-Control=public,max-age=360000"]
+        } // option to add more headers. `Link` headers are transformed by the below criteria
+      }
+    }
   ]
 };
