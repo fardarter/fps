@@ -19,6 +19,7 @@ module.exports = {
     siteUrl: `${process.env.DEPLOY_URL}`
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
