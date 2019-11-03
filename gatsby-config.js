@@ -67,7 +67,7 @@ module.exports = {
         headers: {
           "/*": [
             "Cache-Control: public,max-age=360000",
-            `Content-Security-Policy: style-src 'self' 'unsafe-inline'; worker-src 'self'; base-uri 'self'; default-src 'self'; object-src 'none'; form-action 'self'; font-src 'self' data:; connect-src 'self';`
+            `Content-Security-Policy: img-src 'self' data: images.ctfassets.net; style-src 'self' 'unsafe-inline'; worker-src 'self'; base-uri 'self'; default-src 'self'; object-src 'none'; form-action 'self'; font-src 'self' data:; connect-src 'self';`
           ]
         } // option to add more headers. `Link` headers are transformed by the below criteria
       }
