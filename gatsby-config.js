@@ -66,9 +66,7 @@ module.exports = {
         headers: {
           "/*": [
             "Cache-Control: public,max-age=360000",
-            `Content-Security-Policy: base-uri 'self'; default-src 'self'; script-src 'self' 'sha256-iF/...GM=' 'sha256-BOv...L4='; style-src 'self' 'sha256-WCK...jU=' 'unsafe-inline'; object-src 'none'; form-action 'self'; font-src 'self' data:;
-            connect-src 'self'; 
-            img-src 'self' data:;`
+            `Content-Security-Policy: base-uri 'self'; default-src 'self'; script-src 'self' 'sha256-iF/...GM=' 'sha256-BOv...L4='; style-src 'self' 'sha256-WCK...jU=' 'unsafe-inline'; object-src 'none'; form-action 'self'; font-src 'self' data:; connect-src 'self'; img-src 'self' data:;`
           ]
         } // option to add more headers. `Link` headers are transformed by the below criteria
       }
