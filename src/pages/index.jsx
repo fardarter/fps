@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-
+import Img from "gatsby-image";
 import Layout from "../components/layout";
 import Image from "../components/image";
 import SEO from "../components/seo";
@@ -26,6 +26,9 @@ const IndexPage = () => {
                   size
                 }
               }
+              fluid {
+                ...GatsbyContentfulFluid
+              }
             }
           }
         }
@@ -42,7 +45,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <h1>Hi people</h1>
-
+      <Img fluid={data.allContentfulFireplace.edges[0].node.image.fluid} />
       <img
         src={data.allContentfulFireplace.edges[0].node.image.file.url}
         alt="foo"
