@@ -8,10 +8,24 @@ repos:
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
-  - repo: https://github.com/pre-commit/mirrors-eslint.git
+  - repo: https://github.com/pre-commit/mirrors-eslint
     rev: a83e0a62fd6b81c958ef40d354e4d8938604c9ea
     hooks:
       - id: eslint
+        name: eslint
+        entry: eslint '**/*.{js,jsx,json,md}'
+        language: node
+        "types": [javascript]
+        verbose: true
         additional_dependencies:
-          - eslint@6.6.0
-          - eslint-plugin-import@2.18.2
+          - eslint@^6.6.0
+          - eslint-plugin-json@^2.0.1
+          - eslint-config-prettier@^6.5.0
+          - eslint-config-react-app@^5.0.2
+          - eslint-plugin-jsx-a11y@^6.2.3
+          - eslint-plugin-compat@^3.3.0
+          - eslint-plugin-react-hooks@^2.2.0
+          - eslint-plugin-import@^2.18.2
+          - eslint-plugin-react@^6.10.3
+          - babel-eslint@^10.0.3
+          - eslint-plugin-markdown@^1.0.1

@@ -1,16 +1,14 @@
 module.exports = {
   globals: {
-    __PATH_PREFIX__: true
+    __PATH_PREFIX__: true,
+    ENV: true
   },
   parser: "babel-eslint",
-  plugins: ["compat", "react-hooks"],
+  plugins: ["compat", "react-hooks", "markdown", "json"],
   env: {
     browser: true,
     es6: true,
     node: true
-  },
-  globals: {
-    ENV: true
   },
   extends: [
     "react-app",

@@ -12,6 +12,7 @@
     "gatsby-plugin-netlify": "^2.1.23",
     "gatsby-plugin-offline": "^3.0.17",
     "gatsby-plugin-react-helmet": "^3.1.13",
+    "gatsby-plugin-sass": "^2.1.20",
     "gatsby-plugin-sharp": "^2.2.36",
     "gatsby-plugin-sitemap": "^2.2.19",
     "gatsby-source-contentful": "^2.1.54",
@@ -20,19 +21,20 @@
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-helmet": "^5.2.1",
-    "gatsby-plugin-sass": "^2.1.20"
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.6.0",
+    "eslint-plugin-json": "^2.0.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.5.0",
     "eslint-config-react-app": "^5.0.2",
     "eslint-plugin-compat": "^3.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "",
+    "eslint-plugin-markdown": "^1.0.1",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react-hooks": "^2.2.0",
     "node-sass": "^4.13.0",
     "prettier": "^1.18.2"
@@ -43,8 +45,8 @@
   "license": "MIT",
   "scripts": {
     "test:all": "npm run test:eslint",
-    "fix:eslint": "eslint . --fix",
-    "test:eslint": "eslint .",
+    "fix:eslint": "eslint '**/*.{js,jsx,json,md}' --fix",
+    "test:eslint": "eslint '**/*.{js,jsx,json,md}'",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "build:dev": "gatsby build",
